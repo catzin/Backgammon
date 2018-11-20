@@ -1,0 +1,58 @@
+Reglas del juego Backgammon
+
+    Objetivo del juego
+
+El backgammon es un juego de recorrido para dos jugadores.
+
+Reglas del juego BackgammonEl tablero de backgammon se compone de 24 triángulos (también llamados picos o casillas). Seis casillas juntas forman un cuadrante o tablero interno. Las casillas del 1 al 6 conforman el cuadrante interno o home board. Las casillas del 7 al 12 conforman el cuadrante externo o outer board.
+
+El juego también se compone de 15 fichas para cada jugador, dos dados, un cubilete y un dado especial de apuestas. Los jugadores mueven sus fichas por el tablero según lo que indiquen los dados.
+
+Para ganar el jugador debe llevar todas sus fichas a su cuadrante o tablero interno, y después sacarlas del tablero. Las fichas se mueven en el sentido de las agujas del reloj. El primer jugador que saque las 15 fichas gana la partida.
+
+    Inicio del juego
+
+Al principio de la partida se colocan las fichas como se muestra a continuación:
+
+Para empezar, los jugadores tiran un dado cada uno a la vez. El que saque el número más alto empieza la partida aprovechando esa misma tirada de los dos dados. En caso de empate, los dos jugadores vuelven a tirar los dados.
+
+    Movimiento de las fichas
+
+Mover las fichas
+
+Los jugadores se turnan para tirar los dados y mueven una o varias fichas un determinado número de casillas (triángulos) según la puntuación de cada uno de los dados. Por ejemplo, si saca un 2 y un 4, usted puede:
+
+    - Avanzar 2 casillas con una ficha y 4 con otra.
+    - Avanzar 4 casillas con una ficha y 2 con otra.
+    - Avanzar primero 2 casillas y luego 4 con la misma ficha.
+    - Avanzar primero 4 casillas y luego 2 con la misma ficha.
+
+¡Ojo! Si mueve la misma ficha, no puede avanzar 6 casillas de golpe. Hay que mover la ficha de dos veces obligatoriamente: primero 4 casillas y luego 2 o viceversa.
+
+En el caso de que el jugador saque dobles (ej: 3 y 3), se considera un tiro doble y el jugador debe mover sus fichas como si hubiese tirado cuatro dados iguales. Es decir, una tirada 3-3 permite al jugador mover sus fichas 3 casillas cuatro veces.
+
+Casilla ocupada
+
+Para poder mover una ficha, la casilla de destino no puede estar ocupada. Una casilla está ocupada cuando ya hay al menos dos fichas contrarias.
+
+Las fichas se pueden mover libremente a:
+
+    - una casilla vacía.
+    - una casilla ocupada por una o más fichas del mismo color.
+    - una casilla ocupada por una sola ficha contraria.
+
+Capturar una ficha
+
+Si se mueve una ficha a una casilla ocupada por una sola ficha contraria, se captura esa ficha y se coloca en la barra del tablero, quedando así fuera del juego.
+
+Liberar una ficha
+
+Si un jugador tiene una o más fichas en la barra, tiene que volver a ponerlas en juego antes de poder mover las otras fichas. Para liberar una ficha hay que tirar los dados y mover la ficha a una casilla que no esté ocupada. Las fichas capturadas entran en el juego por el extremo del tablero interno del contrincante.
+
+Si al tirar los dados no es posible mover las fichas capturadas a casillas vacías, no se podrán liberar las fichas. Entonces se pierde el turno y habrá que esperar al siguiente para volver a intentarlo.
+
+Sacar las fichas
+
+Sólo se pueden sacar las fichas del tablero cuando el jugador tenga todas sus fichas en su tablero interno (bear off).
+
+Cuando se saca una ficha, no se puede volver a meter. Si a un jugador le capturan una ficha cuando ya ha empezado a sacarlas de tablero, no puede sacar más fichas hasta que libere la ficha capturada y la vuelva a llevarla a su tablero interno.
