@@ -7,12 +7,9 @@ int main(void){
   spacio();
   Dados a;
   Bicola Tab = creaTab();
-  char *j1;
-  char *j2;
+  char *j1,j2;
   list cuentas = vacia();
-  ApNodo Iz;
-  ApNodo De;
-  ApNodo x;
+  ApNodo Iz,De,x;
   mensaje();
   mensajeR();
   spacio();
