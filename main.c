@@ -4,9 +4,6 @@
 int main(void){
 
   int aux = 0;
-  int aux2 = 0;
-  int n = 0;
-  int b = 0;
   spacio();
   Dados a;
   Bicola Tab = creaTab();
@@ -30,102 +27,12 @@ int main(void){
   printf("Presiona 1 para continuar\n");
   limpiaPantalla(lee());
   cuentas = hazopB(bienvenida(),j1,j2);
+  aux = 1;
 
-  while(1){
+  while(aux != 0){
 
-    ImpTab(Tab);
-    spacio();
-    spacio();
-    printf("%s ,Presiona 1 para tirar dados\n",j1);
-    if(lee()==1){
-      a = tiraDados();
-    }
-    printf("\n");
-    printf("Resultado de tus dados:\n");
-    impDados(a);
-    spacio();
-    if(checkBarraN(Iz,Tab) == 1){
-
-      printf("*TIENES FICHAS EN BARRA*\n");
-      printf("*Estás Obligado a iniciar en el pico 24*\n");
-      spacio();
-      printf("Ingresa numero de posiciones a mover:\n");
-      sacaFichaN(lee(),Iz,De,Tab);
-
-    }
-
-    else{
-
-      printf("Opciones de tiro:\n");
-      if(Daops(a) == 1){
-        printf("Para primera ficha:\n");
-        hazmovN(Iz,De,leepico(),leepico2(),Tab);
-        printf("\n");
-        printf("Para segunda ficha:\n");
-        hazmovN(Iz,De,leepico(),leepico2(),Tab);
-      }
-      else{
-        printf("Para 1 ficha:\n");
-        hazmovN(Iz,De,leepico(),leepico2(),Tab);
-      }
-      spacio();
-      spacio();
-      ImpTab(Tab);
-      spacio();
-
-      printf("Presiona 1 para finalizar turno\n");
-      spacio();
-      limpiaPantalla(lee());
-    }
-
-    ImpTab(Tab);
-    spacio();
-    spacio();
-    printf("%s , Presiona 1 para tirar dados\n",j2);
-    if(lee()==1){
-      a = tiraDados();
-    }
-    printf("Resultado de tus dados:\n");
-    printf("\n");
-    impDados(a);
-    spacio();
-
-    if(checkBarraB(Iz,Tab) == 1){
-
-      printf("*TIENES FICHAS EN BARRA*\n");
-      printf("*Estás Obligado a iniciar en el pico 1*\n");
-      spacio();
-      printf("Ingresa numero de posiciones a mover:\n");
-      sacaFichaB(lee(),Iz,De,Tab);
-    }
-
-    else{
-
-      printf("Opciones de tiro:\n");
-      spacio();
-      if(Daops(a) == 1){
-        spacio();
-        printf("Para primera ficha:\n");
-        spacio();
-        hazmovB(Iz,De,leepico(),leepico2(),Tab);
-        printf("\n");
-        printf("Para segunda ficha:\n");
-        spacio();
-        hazmovB(Iz,De,leepico(),leepico2(),Tab);
-      }
-      else{
-        printf("Para 1 ficha:\n");
-        spacio();
-        hazmovB(Iz,De,leepico(),leepico2(),Tab);
-      }
-      spacio();
-      spacio();
-      ImpTab(Tab);
-      spacio();
-      printf("Presiona 1 para finalizar turno\n");
-      spacio();
-      limpiaPantalla(lee());
-    }
+    juegaN(Iz,De,j1,a,Tab);
+    juegaB(Iz,De,j2,a,Tab);
 
   }
 

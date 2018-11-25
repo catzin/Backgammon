@@ -306,7 +306,7 @@ void comeFichaN(ApNodo Iz,ApNodo De,Bicola Tab){
 
   aux = mueve(aux,Tab,6);
 
-  aux -> dato = De -> dato;
+  aux -> dato = (aux -> dato)++;
   De -> dato = 0;
   Iz -> dato = (Iz -> dato)-1;
   De -> dato = (De -> dato)+1;
@@ -318,7 +318,7 @@ void comeFichaB(ApNodo Iz,ApNodo De,Bicola Tab){
 
   aux = mueve(aux,Tab,19);
 
-  aux -> dato = De -> dato;
+  aux -> dato = (aux -> dato)--;
   De -> dato = 0;
   Iz -> dato = (Iz -> dato)+1;
   De -> dato = (De -> dato)-1;
@@ -469,6 +469,22 @@ int checkBarraB(ApNodo Iz,Bicola Tab){
 
    }
 
+   int suma15(ApNodo De, Bicola Tab){
+     int i = 0 ;
+     De = (ApNodo)Tab ->der;
+     int suma = 0;
+
+     for(i=0;i<6;i++){
+
+       suma += De -> dato;
+
+       De = De -> ant;
+     }
+
+     return  suma;
+   }
+
+
    int checkDesformaB(ApNodo De, Bicola Tab){
      int i = 0 ;
      De = (ApNodo)Tab ->der;
@@ -482,9 +498,9 @@ int checkBarraB(ApNodo Iz,Bicola Tab){
        De = De -> ant;
      }
 
-     if(suma == -15){
+     if(suma == 15){
 
-       aux = -1;
+       aux = 1;
 
      }
      return  aux;
@@ -526,6 +542,11 @@ int checkBarraB(ApNodo Iz,Bicola Tab){
 
       Iz -> dato = (Iz -> dato)-1;
     }
+
+    else{
+
+      Iz -> dato = (Iz -> dato)+1;
+    }
   }
 
   void TiraAdesformarB(ApNodo Iz,ApNodo De,int pico, int n,Bicola Tab){
@@ -537,5 +558,114 @@ int checkBarraB(ApNodo Iz,Bicola Tab){
     if(n > 7){
 
       Iz -> dato = (Iz -> dato)+1;
+    }
+
+    else{
+
+      Iz -> dato = (Iz -> dato)-1;
+    }
+  }
+
+
+
+  void juegaN(ApNodo Iz,ApNodo De,char*j1,Dados a,Bicola Tab){
+    ImpTab(Tab);
+    spacio();
+    spacio();
+    printf("%s ,Presiona 1 para tirar dados\n",j1);
+    if(lee()==1){
+      a = tiraDados();
+    }
+    printf("\n");
+    printf("Resultado de tus dados:\n");
+    impDados(a);
+    spacio();
+    if(checkBarraN(Iz,Tab) == 1){
+
+      printf("*TIENES FICHAS EN BARRA*\n");
+      printf("*Estás Obligado a iniciar en el pico 24*\n");
+      spacio();
+      printf("Ingresa numero de posiciones a mover:\n");
+      sacaFichaN(lee(),Iz,De,Tab);
+
+    }
+
+    else{
+
+      printf("Opciones de tiro:\n");
+      if(Daops(a) == 1){
+        printf("Para primera ficha:\n");
+        hazmovN(Iz,De,leepico(),leepico2(),Tab);
+        printf("\n");
+        printf("Para segunda ficha:\n");
+        hazmovN(Iz,De,leepico(),leepico2(),Tab);
+      }
+      else{
+        printf("Para 1 ficha:\n");
+        hazmovN(Iz,De,leepico(),leepico2(),Tab);
+      }
+      spacio();
+      spacio();
+      ImpTab(Tab);
+      spacio();
+      printf("Presiona 1 para finalizar turno\n");
+      spacio();
+      limpiaPantalla(lee());
+      }
+
+
+
+
+  }
+
+
+  void juegaB(ApNodo Iz,ApNodo De,char *j2,Dados a,Bicola Tab){
+    ImpTab(Tab);
+    spacio();
+    spacio();
+    printf("%s , Presiona 1 para tirar dados\n",j2);
+    if(lee()==1){
+      a = tiraDados();
+    }
+    printf("Resultado de tus dados:\n");
+    printf("\n");
+    impDados(a);
+    spacio();
+
+    if(checkBarraB(Iz,Tab) == 1){
+
+      printf("*TIENES FICHAS EN BARRA*\n");
+      printf("*Estás Obligado a iniciar en el pico 1*\n");
+      spacio();
+      printf("Ingresa numero de posiciones a mover:\n");
+      sacaFichaB(lee(),Iz,De,Tab);
+    }
+
+    else{
+
+      printf("Opciones de tiro:\n");
+      spacio();
+      if(Daops(a) == 1){
+        spacio();
+        printf("Para primera ficha:\n");
+        spacio();
+        hazmovB(Iz,De,leepico(),leepico2(),Tab);
+        printf("\n");
+        printf("Para segunda ficha:\n");
+        spacio();
+        hazmovB(Iz,De,leepico(),leepico2(),Tab);
+      }
+      else{
+        printf("Para 1 ficha:\n");
+        spacio();
+        hazmovB(Iz,De,leepico(),leepico2(),Tab);
+      }
+      spacio();
+      spacio();
+      ImpTab(Tab);
+      spacio();
+      printf("Presiona 1 para finalizar turno\n");
+      spacio();
+      limpiaPantalla(lee());
     }
   }
