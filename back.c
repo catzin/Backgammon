@@ -210,6 +210,48 @@ int tiraDado2(Circular q){
   return resultD(q);
 }
 
+int tiraPrimero(char *j1, char *j2){
+
+  Dados a;
+  Dados b;
+  int aux = 0;
+
+  Dados *ptr = &a;
+  Dados *ptr2 = &b;
+
+  printf("%s Presiona 1 para tirar dado\n",j1);
+  if(lee()==1){
+    a = tiraDados();
+    printf("\n");
+    printf("| %d |\n",ptr -> dado2);
+
+  }
+  spacio();
+  printf("%s Presiona 1 para tirar dado\n",j2);
+  if(lee()==1){
+    b = tiraDados();
+    printf("\n");
+    printf("| %d |\n",ptr2 ->dado2);
+  }
+
+  if(ptr -> dado2 == ptr2 -> dado2){
+
+    return 0;
+  }
+
+  else{
+
+    if(ptr -> dado2 > ptr2 -> dado2){
+
+      return 1;
+    }
+    else{
+      return 2;
+    }
+  }
+
+}
+
 ApNodo mueve(ApNodo x ,Bicola z,int n){
 
   int i = 0;
