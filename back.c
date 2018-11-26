@@ -346,9 +346,9 @@ void ajusta(int *n){
 void comeFichaN(ApNodo Iz,ApNodo De,Bicola Tab){
   ApNodo aux;
 
-  aux = mueve(aux,Tab,6);
+  aux = mueve(aux,Tab,6); //pico donde se ponen fichas "barra"
 
-  aux -> dato = (aux -> dato)++;
+  aux -> dato = (aux -> dato)-1;
   De -> dato = 0;
   Iz -> dato = (Iz -> dato)-1;
   De -> dato = (De -> dato)+1;
@@ -360,7 +360,7 @@ void comeFichaB(ApNodo Iz,ApNodo De,Bicola Tab){
 
   aux = mueve(aux,Tab,19);
 
-  aux -> dato = (aux -> dato)--;
+  aux -> dato = (aux -> dato)+1;
   De -> dato = 0;
   Iz -> dato = (Iz -> dato)+1;
   De -> dato = (De -> dato)-1;
@@ -382,10 +382,13 @@ void hazmovN(ApNodo Iz,ApNodo De, int pico,int n, Bicola Tab){
   Iz = mueve(Iz,Tab,pico); // posiciona en pico origen
   De = mueve(De,Tab,n); // posiciona en pico destino
 
-  if(Iz -> dato >0){
-
-    if((De -> dato < 0)&&(De -> dato != -1) ){
-      printf("Movimiento invalidado\n");
+  if((Iz -> dato >0)){
+    if((De -> dato < 0)){
+      printf("Movimiento Invalidado\n");
+    }
+    else{
+      Iz -> dato = (Iz -> dato)-1;
+      De -> dato = (De -> dato)+1;
     }
 
     if(De -> dato == -1){
@@ -393,14 +396,9 @@ void hazmovN(ApNodo Iz,ApNodo De, int pico,int n, Bicola Tab){
       comeFichaN(Iz,De,Tab);
     }
 
-    else{
-
-      Iz -> dato = Iz -> dato -1;
-      De -> dato = De -> dato +1;
-
-    }
   }
 }
+
 void hazmovB(ApNodo Iz,ApNodo De, int pico,int n, Bicola Tab){
   Iz = (ApNodo)Tab -> izq;
   De = (ApNodo)Tab -> der;
@@ -418,13 +416,8 @@ void hazmovB(ApNodo Iz,ApNodo De, int pico,int n, Bicola Tab){
 
   if(Iz -> dato < 0){
 
-    if((Iz -> dato > 0)&&(De -> dato != 1) ){
+    if(De -> dato >0){
       printf("Movimiento invalidado\n");
-    }
-
-    if(De -> dato == 1){
-
-      comeFichaB(Iz,De,Tab);
     }
 
     else{
@@ -433,6 +426,14 @@ void hazmovB(ApNodo Iz,ApNodo De, int pico,int n, Bicola Tab){
       De -> dato = De -> dato -1;
 
     }
+
+    if(De -> dato == 1){
+
+      comeFichaB(Iz,De,Tab);
+    }
+
+
+
   }
 
 }
@@ -456,7 +457,7 @@ void sacaFichaN(int aux ,ApNodo Iz,ApNodo De,Bicola Tab){
 
   Iz = mueve(Iz,Tab,12-(aux-1));
   De = mueve(De,Tab,19);
-  Iz -> dato = (Iz -> dato)+ (De -> dato);
+  Iz -> dato = (Iz -> dato)+(De -> dato);
   De -> dato = (De -> dato) - 1;
 
 }
@@ -465,7 +466,7 @@ void sacaFichaB(int aux ,ApNodo Iz,ApNodo De,Bicola Tab){
 
   Iz = mueve(Iz,Tab,25-(aux-1));
   De = mueve(De,Tab,6);
-  Iz -> dato = (Iz -> dato) - (De -> dato);
+  Iz -> dato = (Iz -> dato) +(De -> dato);
   De -> dato = (De -> dato) + 1;
 
 }

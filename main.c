@@ -46,8 +46,18 @@ int main(void){
 
   while(aux != 0){
 
-    juegaN(Iz,De,j1,a,Tab);
-    juegaB(Iz,De,j2,a,Tab);
+    if(n==1){
+
+      juegaB(Iz,De,j2,a,Tab);
+      juegaN(Iz,De,j1,a,Tab);
+
+    }
+
+    else{
+
+      juegaN(Iz,De,j1,a,Tab);
+      juegaB(Iz,De,j2,a,Tab);
+    }
 
   }
 
