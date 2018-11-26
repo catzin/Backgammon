@@ -4,6 +4,7 @@
 int main(void){
 
   int aux = 0;
+  int n = 0;
   spacio();
   Dados a;
   Bicola Tab = creaTab();
@@ -25,6 +26,23 @@ int main(void){
   limpiaPantalla(lee());
   cuentas = hazopB(bienvenida(),j1,j2);
   aux = 1;
+  int aux2 = 0;
+
+  do{
+    n = tiraPrimero(j1,j2);
+
+  }while(n==0);
+  printf("Presiona 1 para continuar\n");
+  limpiaPantalla(lee());
+
+  if(n==1){
+    juegaN(Iz,De,j1,a,Tab);
+
+  }
+  else{
+
+    juegaB(Iz,De,j2,a,Tab);
+  }
 
   while(aux != 0){
 
