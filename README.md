@@ -8,6 +8,6 @@ Te recomiendo que no clones el repositorio y lo entregues como tal, analizalo pr
 
 PD: Si de plano tienes que salvarte , entregalo, pero cuidado con las consecuencias.
 
-Suerte, explorador.
+
 
 
